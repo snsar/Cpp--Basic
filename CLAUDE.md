@@ -1,4 +1,6 @@
-# CLAUDE.md — C++ Basic Study Repo
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Purpose
 This repo is for learning basic C++. The user sends a topic, and Claude generates exercises with solutions. All exercise content (problem descriptions, explanations, comments) must be in **Vietnamese**. Rule files are in English.
@@ -70,3 +72,14 @@ Output: ...
 - Append new exercises at the end of the file.
 - Maintain difficulty progression within the file.
 - Do not duplicate existing exercises.
+
+## Compiling Solutions
+To verify a solution compiles correctly:
+```bash
+g++ -std=c++17 -Wall -o solution solution.cpp
+```
+
+## Available Skills
+- `/new-topic <topic> [count]` — generate exercises for a topic and append to the correct file (default: 5)
+- `/solve <exercise name>` — explain and solve a specific exercise with step-by-step Vietnamese walkthrough
+- `/review <code>` — review user-submitted code for correctness, style, and performance
